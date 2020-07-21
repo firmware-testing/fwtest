@@ -1,0 +1,27 @@
+# Basic design:
+# - fw.<foo> specifies a firmware that can be tested
+#   - eventually how to compile
+#   - at that point, will probably add architectue or config to make this key
+#     unique
+# - board.<foo> will specify how to flash, logic analyzer pins, and how to reset
+
+[fw.grblmega]
+# MKS Gen_L uses a ch340 with "1a86_USB2.0-Serial"
+usb_match = "Arduino_Srl_Arduino_Mega"
+comms = "grbl"
+boards = ["mega"]
+
+[fw.grblhal_stm]
+usb_match = "STM32_Virtual_ComPort"
+comms = "grbl"
+boards = ["bluepill", "bl-usbmach"]
+
+[fw.g2]
+usb_match = "Synthetos_TinyG_v2"
+comms = "g2"
+boards = ["due"]
+
+[fw.smoothie]
+usb_match = "Uberclock_Smoothieboard"
+comms = "smoothie"
+boards = ["smoothieboard"]

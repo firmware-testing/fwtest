@@ -1,0 +1,5 @@
+*.bak
+*.py[co]
+__pycache__
+*.sw[op]
+log
